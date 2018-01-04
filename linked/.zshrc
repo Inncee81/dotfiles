@@ -23,7 +23,7 @@ if ! zgen saved; then
   zgen load zsh-users/zsh-syntax-highlighting zsh-syntax-highlighting.zsh
   zgen load zsh-users/zsh-history-substring-search  # load after zsh-users/zsh-syntax-highlighting
 
-  zgen load ~/src/github.com/itiut/dotfiles/linked/.zsh/functions/init.zsh
+  zgen load ~/src/github.com/kojole/dotfiles/linked/.zsh/functions/init.zsh
 
   zgen save
 fi

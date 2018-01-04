@@ -1,6 +1,6 @@
 dotfiles
 ====
-[![Build Status](https://travis-ci.org/itiut/dotfiles.svg?branch=master)](https://travis-ci.org/itiut/dotfiles)
+[![Build Status](https://travis-ci.org/kojole/dotfiles.svg?branch=master)](https://travis-ci.org/kojole/dotfiles)
 
 > :wrench: My dotfiles
 

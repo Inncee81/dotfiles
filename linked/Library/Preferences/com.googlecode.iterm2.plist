@@ -14,6 +14,8 @@
 	<integer>0</integer>
 	<key>AppleSmoothFixedFontsSizeThreshold</key>
 	<integer>1</integer>
+	<key>AppleWindowTabbingMode</key>
+	<string>manual</string>
 	<key>AutoHideTmuxClientSession</key>
 	<false/>
 	<key>CheckTestRelease</key>
@@ -401,7 +403,7 @@
 	<key>MaxVertically</key>
 	<false/>
 	<key>NSNavLastRootDirectory</key>
-	<string>~/src/github.com/itiut/dotfiles/linked/Library/Preferences</string>
+	<string>~/src/github.com/kojole/dotfiles/linked/Library/Preferences</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
 	<string>{712, 448}</string>
 	<key>NSQuotedKeystrokeBinding</key>
@@ -435,19 +437,12 @@
 	</data>
 	<key>NSTableView Supports v2 KeyBingingTable</key>
 	<true/>
-	<key>NSToolbar Configuration com.apple.NSColorPanel</key>
-	<dict>
-		<key>TB Is Shown</key>
-		<integer>1</integer>
-	</dict>
-	<key>NSWindow Frame SUAutomaticUpdateAlert</key>
-	<string>534 639 616 174 0 0 1680 1027 </string>
 	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>532 476 620 392 0 0 1680 1027 </string>
+	<string>530 476 620 392 0 0 1680 1027 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>214 295 796 473 0 0 1680 1027 </string>
+	<string>319 160 796 473 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 0 1674 1027 0 0 1680 1027 </string>
+	<string>160 229 1144 673 0 0 1680 1027 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -1173,7 +1168,7 @@
 			<key>Window Type</key>
 			<integer>0</integer>
 			<key>Working Directory</key>
-			<string>/Users/itiut</string>
+			<string>/Users/kojole</string>
 		</dict>
 		<dict>
 			<key>ASCII Anti Aliased</key>
@@ -1902,17 +1897,15 @@
 			<key>Window Type</key>
 			<integer>6</integer>
 			<key>Working Directory</key>
-			<string>/Users/itiut</string>
+			<string>/Users/kojole</string>
 		</dict>
 	</array>
 	<key>NoSyncHaveWarnedAboutPasteConfirmationChange</key>
 	<true/>
 	<key>NoSyncInstallationId</key>
-	<string>0C5180BA-A406-442B-819D-2EEA2DF0F929</string>
-	<key>NoSyncPermissionToShowTip</key>
-	<false/>
+	<string>0577FA70-B0B8-4865-AFB9-F9AED570AF23</string>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
-	<real>503978593.14251798</real>
+	<real>536748166.86401403</real>
 	<key>OnlyWhenMoreTabs</key>
 	<true/>
 	<key>OpenArrangementAtStartup</key>
@@ -1959,7 +1952,7 @@
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
-	<string>/Users/itiut/src/github.com/itiut/dotfiles/linked/Library/Preferences</string>
+	<string>/Users/kojole/src/github.com/kojole/dotfiles/linked/Library/Preferences</string>
 	<key>PromptOnQuit</key>
 	<true/>
 	<key>QuickPasteBytesPerCall</key>
@@ -1972,23 +1965,19 @@
 	<integer>8</integer>
 	<key>RightOption</key>
 	<integer>3</integer>
-	<key>SUAutomaticallyUpdate</key>
-	<true/>
 	<key>SUEnableAutomaticChecks</key>
 	<true/>
 	<key>SUFeedAlternateAppNameKey</key>
 	<string>iTerm</string>
 	<key>SUFeedURL</key>
-	<string>https://iterm2.com/appcasts/testing.xml?shard=77</string>
+	<string>https://iterm2.com/appcasts/testing.xml?shard=28</string>
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2017-11-10T13:04:10Z</date>
+	<date>2018-01-04T08:44:20Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SavePasteHistory</key>
-	<false/>
-	<key>Secure Input</key>
 	<false/>
 	<key>ShowBookmarkName</key>
 	<false/>
@@ -2038,6 +2027,6 @@
 	<key>findRegex_iTerm</key>
 	<false/>
 	<key>iTerm Version</key>
-	<string>3.1.5.beta.1</string>
+	<string>3.1.5.beta.2</string>
 </dict>
 </plist>
