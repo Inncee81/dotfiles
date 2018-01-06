@@ -10,9 +10,9 @@ before_install:
 - bundle install
 - brew update
 - brew --version
-- mkdir -pv $HOME/.aws $HOME/.config $HOME/.ssh $HOME/Dropbox/.share/.aws $HOME/Dropbox/.share/.config
+- mkdir -pv $HOME/.aws $HOME/.ssh $HOME/Dropbox/.share/.aws
   $HOME/Dropbox/.share/.ssh $HOME/Library/Application\ Support/Code/User
-- touch $HOME/Dropbox/.share/.aws/config $HOME/Dropbox/.share/.aws/credentials $HOME/Dropbox/.share/.config/hub
+- touch $HOME/Dropbox/.share/.aws/config $HOME/Dropbox/.share/.aws/credentials
   $HOME/Dropbox/.share/.gist $HOME/Dropbox/.share/.gitconfig.local $HOME/Dropbox/.share/.ssh/config
   $HOME/Dropbox/.share/.wakatime.cfg $HOME/Dropbox/.share/.zshenv.local
 install:

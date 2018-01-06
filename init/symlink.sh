@@ -15,7 +15,6 @@ DOTFILES_DROPBOX_DIR=$HOME/Dropbox/.share
 DOTFILES_DROPBOX_ADDITIONAL_TARGETS=(
   .aws/config
   .aws/credentials
-  .config/hub
   .ssh/config
 )
 
