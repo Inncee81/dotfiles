@@ -13,7 +13,7 @@ if ! zgen saved; then
   for lib in ${_omz_libs[@]}; do
     zgen load robbyrussell/oh-my-zsh lib/$lib.zsh
   done
-  zgen load itiut/itiut.zsh-theme itiut.zsh-theme  # depends on oh-my-zsh
+  zgen load kojole/hanpen.zsh-theme hanpen.zsh-theme  # depends on oh-my-zsh
 
   zgen load /usr/local/opt/fzf/shell
   zgen load marzocchi/zsh-notify
