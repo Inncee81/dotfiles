@@ -18,7 +18,6 @@ describe 'symlink' do
                  Library/Scripts
                  .aws/config
                  .aws/credentials
-                 .config/hub
                  .ssh/config
                ))
 
