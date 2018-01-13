@@ -15,7 +15,7 @@ before_install:
 - touch $HOME/Dropbox/.share/.aws/config $HOME/Dropbox/.share/.aws/credentials $HOME/Dropbox/.share/.gitconfig.local
   $HOME/Dropbox/.share/.ssh/config $HOME/Dropbox/.share/.zshenv.local
 install:
-- travis_retry make brew
+- brew install zsh
 - make shell
 - yes | make symlink
 script:

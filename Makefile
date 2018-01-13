@@ -4,7 +4,7 @@ test:
 	rake spec
 
 brew:
-	./init/brew.sh
+	brew bundle --global
 
 shell:
 	./init/shell.sh
