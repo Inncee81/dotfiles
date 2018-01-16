@@ -26,7 +26,7 @@ prepare_zgen() {
     echo zgen exists, skip.
     return
   fi
-  git clone https://github.com/tarjoilija/zgen.git $(dirname $ZGEN_PATH)
+  git clone https://github.com/tarjoilija/zgen $(dirname $ZGEN_PATH)
 }
 
 prepare_tpm() {
@@ -34,7 +34,7 @@ prepare_tpm() {
     echo tpm exists, skip.
     return
   fi
-  git clone https://github.com/tmux-plugins/tpm.git $(dirname $TPM_PATH)
+  git clone https://github.com/tmux-plugins/tpm $(dirname $TPM_PATH)
 }
 
 prepare_loginshell
