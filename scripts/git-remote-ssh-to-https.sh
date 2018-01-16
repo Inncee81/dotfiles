@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+set -eu
+
+main() {
+  local remote=$1
+  local url=$(git config remote.${remote}.url)
+  if [[ -z $url ]]; then
+    echo "Can't find remote \`$remote\`"
+    return 1
+  fi
+  if [[ $url =~ ^git@github.com: ]]; then
+    local newUrl=${url/#git@github.com:/https:\/\/github.com\/}
+    newUrl=${newUrl/%.git/}
+    echo "Changing remote \`${remote}\` url"
+    echo "  from  $url"
+    echo "  to    $newUrl"
+    git remote set-url $remote $newUrl
+  else
+    echo "Already set to https"
+  fi
+}
+
+main ${1:-origin}
