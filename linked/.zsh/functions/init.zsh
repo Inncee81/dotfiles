@@ -1,42 +1,42 @@
 #!/usr/bin/env zsh
 ### autolaod
 autoload -Uz \
-  cdup-or-insert-circumflex \
-  fzf-ghq \
-  fzf-ghq--cd \
-  fzf-git-commit-hash \
-  gen-mit-license
+  gen-mit-license \
+  w-cdup-or-insert-circumflex \
+  w-fzf-ghq \
+  w-fzf-ghq--cd \
+  w-fzf-git-commit-hash
 
 autoload -z \
-  fzf-ghq--browse \
-  ls-and-git-status \
-  open-current-directory
+  w-fzf-ghq--browse \
+  w-ls-and-git-status \
+  w-open-current-directory
 
-### keybinding
-# cdup-or-insert-circumflex by <^>
-zle -N cdup-or-insert-circumflex
-bindkey '\^' cdup-or-insert-circumflex
+### keybindings
+# <^>
+zle -N w-cdup-or-insert-circumflex
+bindkey '\^' w-cdup-or-insert-circumflex
 
-# fzf-ghq by <ctrl-shift-]> or <ctrl-\>
-zle -N fzf-ghq
-bindkey '^\' fzf-ghq
+# <ctrl-shift-]> or <ctrl-\>
+zle -N w-fzf-ghq
+bindkey '^\' w-fzf-ghq
 
-# fzf-ghq--browse by <alt-]>
-zle -N fzf-ghq--browse
-bindkey '^[]' fzf-ghq--browse
+# <alt-]>
+zle -N w-fzf-ghq--browse
+bindkey '^[]' w-fzf-ghq--browse
 
-# fzf-ghq--cd by <ctrl-]>
-zle -N fzf-ghq--cd
-bindkey '^]' fzf-ghq--cd
+# <ctrl-]>
+zle -N w-fzf-ghq--cd
+bindkey '^]' w-fzf-ghq--cd
 
-# fzf-git-commit-hash by <alt-@>
-zle -N fzf-git-commit-hash
-bindkey '^[@' fzf-git-commit-hash
+# <alt-@>
+zle -N w-fzf-git-commit-hash
+bindkey '^[@' w-fzf-git-commit-hash
 
-# ls-and-git-status by <alt-l>
-zle -N ls-and-git-status
-bindkey '^[l' ls-and-git-status
+# <alt-l>
+zle -N w-ls-and-git-status
+bindkey '^[l' w-ls-and-git-status
 
-# open-current-directory by <ctrl-o>
-zle -N open-current-directory
-bindkey '^O' open-current-directory
+# <ctrl-o>
+zle -N w-open-current-directory
+bindkey '^O' w-open-current-directory
