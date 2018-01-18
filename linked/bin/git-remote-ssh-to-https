@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Change git remote URL scheme from ssh to https
 set -eu
 
 main() {

@@ -8,6 +8,7 @@ DOTFILES_ADDITIONAL_TARGETS=(
   .Brewfile
   .emacs.d
   bin/gen-mit-license
+  bin/git-remote-ssh-to-https
   Library/Application\ Support/Code/User/keybindings.json
   Library/Application\ Support/Code/User/settings.json
   Library/Scripts
