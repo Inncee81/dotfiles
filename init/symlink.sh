@@ -7,6 +7,7 @@ DOTFILES_ADDITIONAL_TARGETS=(
   .atom
   .Brewfile
   .emacs.d
+  bin/gen-mit-license
   Library/Application\ Support/Code/User/keybindings.json
   Library/Application\ Support/Code/User/settings.json
   Library/Scripts

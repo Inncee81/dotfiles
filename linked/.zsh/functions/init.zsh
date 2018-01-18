@@ -1,7 +1,6 @@
 #!/usr/bin/env zsh
 ### autolaod
 autoload -Uz \
-  gen-mit-license \
   w-cdup-or-insert-circumflex \
   w-fzf-ghq \
   w-fzf-ghq--cd \
