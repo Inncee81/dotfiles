@@ -1,15 +1,10 @@
 {
-  "[c]": {
-    "editor.formatOnSave": true
-  },
-  "[cpp]": {
-    "editor.formatOnSave": true
-  },
   "C_Cpp.clang_format_path": "/usr/local/bin/clang-format",
   "C_Cpp.intelliSenseEngine": "Default",
   "c-cpp-flylint.flexelint.enable": false,
   "editor.fontFamily": "Source Code Pro, Ricty Diminished",
   "editor.fontSize": 14,
+  "editor.formatOnSave": true,
   "editor.formatOnType": true,
   "editor.renderLineHighlight": "all",
   "editor.scrollBeyondLastLine": false,
