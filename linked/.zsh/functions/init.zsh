@@ -4,7 +4,8 @@ autoload -Uz \
   w-cdup-or-insert-circumflex \
   w-fzf-ghq \
   w-fzf-ghq--cd \
-  w-fzf-git-commit-hash
+  w-fzf-git-commit-hash \
+  w-tig
 
 autoload -z \
   w-fzf-ghq--browse \
@@ -39,3 +40,7 @@ bindkey '^[l' w-ls-and-git-status
 # <ctrl-o>
 zle -N w-open-current-directory
 bindkey '^O' w-open-current-directory
+
+# <ctrl-^>
+zle -N w-tig
+bindkey '^^' w-tig

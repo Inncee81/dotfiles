@@ -1,0 +1,7 @@
+#!/usr/bin/env zsh
+# Open tig
+
+if [[ -z $BUFFER ]]; then
+  BUFFER='tig'
+  zle accept-line
+fi
