@@ -1,6 +1,7 @@
 #!/usr/bin/env zsh
 ### autolaod
 autoload -Uz \
+  co \
   w-cdup-or-insert-circumflex \
   w-fzf-ghq \
   w-fzf-ghq--cd \
