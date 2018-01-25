@@ -117,9 +117,15 @@ magic-abbrev-expand() {
 zle -N magic-abbrev-expand
 bindkey '^@' magic-abbrev-expand
 
+### chpwd functions
 # automatically run `ls` after `cd`
 auto-ls() { ls; }
-chpwd_functions+=(auto-ls)
+
+# `cd` to recent directories
+autoload -Uz cdr chpwd_recent_dirs
+zstyle ':completion:*:*:cdr:*:*' menu selection
+
+chpwd_functions+=(auto-ls chpwd_recent_dirs)
 
 ### envs
 if (( ${+commands[direnv]} )); then
