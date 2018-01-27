@@ -94,6 +94,7 @@ abbreviations=(
   'A'  '| awk'
   'C'  '| clipcopy'
   'CD'  '&& cd $_'
+  'CN' '| head -c -1 | clipcopy'
   'E'  '2>&1 > /dev/null'
   'F'  '| fzf'
   'G'  '| grep'
