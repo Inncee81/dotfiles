@@ -5,7 +5,8 @@ autoload -Uz \
   w-cdup-or-insert-circumflex \
   w-fzf-ghq \
   w-fzf-ghq--cd \
-  w-fzf-git-commit-hash
+  w-fzf-git-commit-hash \
+  w-fzf-git-unstaged-files
 
 autoload -z \
   w-fzf-ghq--browse \
@@ -32,6 +33,10 @@ bindkey '^]' w-fzf-ghq--cd
 # <alt-@>
 zle -N w-fzf-git-commit-hash
 bindkey '^[@' w-fzf-git-commit-hash
+
+# <alt-t>
+zle -N w-fzf-git-unstaged-files
+bindkey '^[t' w-fzf-git-unstaged-files
 
 # <alt-l>
 zle -N w-ls-and-git-status

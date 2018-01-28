@@ -1,0 +1,13 @@
+#!/usr/bin/env zsh
+# Insert the selected git unstaged files into the command line
+
+if ! git rev-parse --is-inside-work-tree &> /dev/null; then
+  return
+fi
+
+local files=$(git status -s | grep -e '^.[M?]' | fzf-tmux -m | cut -c 4- | sed -e 's/ /\\ /g' | tr '\n' ' ')
+[[ -z $files ]] && return
+
+LBUFFER=${LBUFFER}${files}
+zle reset-prompt
+typeset -f zle-line-init > /dev/null && zle zle-line-init
