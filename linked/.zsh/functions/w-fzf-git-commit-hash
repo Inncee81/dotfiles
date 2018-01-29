@@ -5,9 +5,9 @@ if ! git rev-parse --is-inside-work-tree &> /dev/null; then
   return
 fi
 
-local hash=$(git log --oneline | fzf-tmux --prompt 'hash> ' | cut -d' ' -f1)
+local hash=$(git log --oneline | fzf-tmux --prompt 'hash> ')
 [[ -z $hash ]] && return
 
-LBUFFER=${LBUFFER}${hash}
+LBUFFER=${LBUFFER}${hash%%\ *}
 zle reset-prompt
 typeset -f zle-line-init > /dev/null && zle zle-line-init
