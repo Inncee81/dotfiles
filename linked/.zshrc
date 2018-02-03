@@ -16,6 +16,7 @@ if ! zgen saved; then
   zgen load kojole/hanpen.zsh-theme hanpen.zsh-theme  # depends on oh-my-zsh
 
   zgen load /usr/local/opt/fzf/shell
+  zgen load $HOME/.rustup/toolchains/nightly-x86_64-apple-darwin/share/zsh/site-functions
   zgen load marzocchi/zsh-notify
   zgen load mollifier/cd-gitroot
   zgen load sindresorhus/pretty-time-zsh
