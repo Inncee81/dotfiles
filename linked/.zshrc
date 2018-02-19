@@ -3,7 +3,6 @@ source $HOME/src/github.com/tarjoilija/zgen/zgen.zsh
 
 if ! zgen saved; then
   # oh-my-zsh/lib/theme-and-appearance.zsh requires .dircolors to exist
-  # See https://github.com/robbyrussell/oh-my-zsh/commit/1b799e9762067f912c0eb807cd5a55d8f122adfd
   zgen clone seebi/dircolors-solarized
   if [ ! -L $HOME/.dircolors ]; then
     ln -sv $(-zgen-get-clone-dir seebi/dircolors-solarized)/dircolors.256dark $HOME/.dircolors
@@ -15,7 +14,8 @@ if ! zgen saved; then
   done
   zgen load kojole/hanpen.zsh-theme hanpen.zsh-theme  # depends on oh-my-zsh
 
-  zgen load /usr/local/opt/fzf/shell
+  [[ -d /usr/local/opt/fzf/shell ]] && zgen load /usr/local/opt/fzf/shell  # homebrew
+  [[ -d /usr/share/fzf           ]] && zgen load /usr/share/fzf            # pacman
   zgen load marzocchi/zsh-notify
   zgen load mollifier/cd-gitroot
   zgen load sindresorhus/pretty-time-zsh

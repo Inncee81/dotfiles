@@ -1,52 +1,48 @@
 #!/usr/bin/env bash
 set -eu
 
-PROJECT_ROOT=$(cd $(dirname $0)/.. && pwd)
+PROJECT_ROOT=$(cd ${0%/*}/.. && pwd)
 DOTFILES_DIR=$PROJECT_ROOT/linked
-DOTFILES_ADDITIONAL_TARGETS=(
-  .atom
-  .Brewfile
-  .emacs.d
-  bin/gen-mit-license
-  bin/git-remote-ssh-to-https
-  Library/Application\ Support/Code/User/keybindings.json
-  Library/Application\ Support/Code/User/settings.json
-  Library/Scripts
-)
 DOTFILES_DROPBOX_DIR=$HOME/Dropbox/.share
-DOTFILES_DROPBOX_ADDITIONAL_TARGETS=(
-  .aws/config
-  .aws/credentials
-  .ssh/config
-)
 
 ln_s() {
-  local target=$1
-  local target_dir=$2
-  if [ -L "$HOME/$target" ]; then
-    echo symlink exists, skip: $HOME/$target
+  local target_dir=$1
+  local target=$2
+  local link_dir=$HOME/${3-}
+  link_dir=${link_dir%/}
+  local link=$link_dir/$target
+  if [[ -L $link ]]; then
+    echo "Symlink exists, skip: $link"
   else
-    ln -isv "$target_dir/$target" "$HOME/$target"
+    ln -isv $target_dir/$target $link
   fi
 }
 
 create_symlinks() {
   local dir=$1
-  for target in $dir/.[a-z]*; do
-    if [ -f $target ]; then
-      ln_s $(basename $target) $dir
+  for target in $dir/.[A-Za-z]*; do
+    if [[ -f $target ]]; then
+      ln_s $dir ${target##*/}
     fi
   done
 }
 
+create_symlinks_darwin() {
+  ln_s $DOTFILES_DIR Code/User/keybindings.json Library/Application\ Support
+  ln_s $DOTFILES_DIR Code/User/settings.json    Library/Application\ Support
+  ln_s $DOTFILES_DIR Library/Scripts
+}
+
+create_symlinks_linux() {
+  ln_s $DOTFILES_DIR Code/User/keybindings.json .config
+  ln_s $DOTFILES_DIR Code/User/settings.json    .config
+}
+
 create_symlinks $DOTFILES_DIR
-create_symlinks $DOTFILES_DROPBOX_DIR
+[[ $(uname -s) = "Darwin" ]] && create_symlinks_darwin
+[[ $(uname -s) = "Linux"  ]] && create_symlinks_linux
 
-# NOTE: target path can contain spaces
-for target in "${DOTFILES_ADDITIONAL_TARGETS[@]}"; do
-  ln_s "$target" $DOTFILES_DIR
-done
-
-for target in ${DOTFILES_DROPBOX_ADDITIONAL_TARGETS[@]}; do
-  ln_s $target $DOTFILES_DROPBOX_DIR
-done
+if [[ -d $DOTFILES_DROPBOX_DIR ]]; then
+  create_symlinks $DOTFILES_DROPBOX_DIR
+  ln_s $DOTFILES_DROPBOX_DIR .ssh/config
+fi
