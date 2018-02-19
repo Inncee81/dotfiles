@@ -10,14 +10,10 @@ describe 'symlink' do
   files = dotfiles(File.join(PROJECT_ROOT, 'linked'))
   files.concat(dotfiles(File.expand_path('.share', '~/Dropbox')))
   files.concat(%w(
-                 .atom
                  .Brewfile
-                 .emacs.d
                  Library/Application\ Support/Code/User/keybindings.json
                  Library/Application\ Support/Code/User/settings.json
                  Library/Scripts
-                 .aws/config
-                 .aws/credentials
                  .ssh/config
                ))
 
