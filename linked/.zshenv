@@ -6,7 +6,7 @@ export LESS='-iMR'
 
 typeset -U path manpath
 path=(
-  $HOME{/Dropbox,/.cargo,}/bin(N-/)
+  $HOME{/Dropbox,/src/github.com/kojole/dotfiles,/.cargo,}/bin(N-/)
   /usr/local/opt/{coreutils,findutils,gnu-sed}/libexec/gnubin(N-/)
   {/usr/local,/usr,}/bin(N-/)
   {/usr,}/sbin(N-/)

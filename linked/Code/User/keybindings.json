@@ -1,5 +1,5 @@
 [
-// Default
+  // Default
   {
     "key": "ctrl+alt+h",
     "command": "deleteWordLeft",
@@ -15,8 +15,7 @@
     "command": "deleteWordLeft",
     "when": "editorTextFocus && !editorReadonly && !editorHasSelection"
   },
-
-// Editor
+  // Editor
   {
     "key": "alt+/",
     "command": "editor.action.triggerSuggest",
@@ -53,8 +52,7 @@
     "command": "editor.action.sortLinesAscending",
     "when": "editorTextFocus && !editorReadonly && editorHasSelection"
   },
-
-// Explorer
+  // Explorer
   {
     "key": "a",
     "command": "explorer.newFile",
@@ -74,8 +72,7 @@
     "command": "renameFile",
     "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
   },
-
-// Workbench
+  // Workbench
   {
     "key": "ctrl+tab",
     "command": "workbench.action.nextEditorInGroup"
@@ -84,8 +81,11 @@
     "key": "ctrl+shift+tab",
     "command": "workbench.action.previousEditorInGroup"
   },
-
-// Git Project Manager
+  {
+    "key": "ctrl+x k",
+    "command": "workbench.action.closeActiveEditor"
+  },
+  // Git Project Manager
   {
     "key": "alt+cmd+p",
     "command": "-gitProjectManager.openProject"
