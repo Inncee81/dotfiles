@@ -21,7 +21,7 @@ ln_s() {
 create_symlinks() {
   local dir=$1
   for target in $dir/.[A-Za-z]*; do
-    if [[ -f $target ]]; then
+    if [[ -f $target && $target != */.DS_Store ]]; then
       ln_s $dir ${target##*/}
     fi
   done
