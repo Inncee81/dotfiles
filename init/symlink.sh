@@ -14,7 +14,7 @@ ln_s() {
   if [[ -L $link ]]; then
     echo "Symlink exists, skip: $link"
   else
-    ln -isv $target_dir/$target $link
+    ln -isv $target_dir/$target "$link"
   fi
 }
 
