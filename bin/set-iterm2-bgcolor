@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+# Set iTerm2 background color
+set -eu
+
+main() {
+  local r=${1:-0}
+  local g=${2:-0}
+  local b=${3:-0}
+
+  osascript <<EOF
+tell application "iTerm2"
+  tell current session of current window
+    set background color to {$(($r*65535/255)), $(($g*65535/255)), $(($b*65535/255))}
+  end tell
+end tell
+EOF
+}
+
+main $@
