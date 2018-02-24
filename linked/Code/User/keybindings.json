@@ -48,6 +48,16 @@
     "when": "editorTextFocus && !editorReadOnly"
   },
   {
+    "key": "ctrl+x a",
+    "command": "git.stage",
+    "when": "editorTextFocus && !editorReadOnly"
+  },
+  {
+    "key": "ctrl+x shift+a",
+    "command": "git.stageAll",
+    "when": "editorTextFocus && !editorReadOnly"
+  },
+  {
     "key": "f7",
     "command": "editor.action.sortLinesAscending",
     "when": "editorTextFocus && !editorReadonly && editorHasSelection"
