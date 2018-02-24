@@ -58,6 +58,16 @@
     "when": "editorTextFocus && !editorReadOnly"
   },
   {
+    "key": "ctrl+[BracketLeft]",
+    "command": "editor.action.smartSelect.grow",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+shift+[BracketLeft]",
+    "command": "editor.action.smartSelect.shrink",
+    "when": "editorTextFocus"
+  },
+  {
     "key": "f7",
     "command": "editor.action.sortLinesAscending",
     "when": "editorTextFocus && !editorReadonly && editorHasSelection"
