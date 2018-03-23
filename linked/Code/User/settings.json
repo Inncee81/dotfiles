@@ -27,7 +27,7 @@
     "rubocop": true,
     "ruby": true
   },
-  "rust-client.channel": "beta",
+  "rust-client.channel": "nightly",
   "window.title": "${activeEditorMedium}${separator}${rootName}",
   "workbench.colorTheme": "Tomorrow Night",
   "workbench.editor.enablePreviewFromQuickOpen": false,
