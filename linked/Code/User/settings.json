@@ -10,6 +10,7 @@
   "editor.renderLineHighlight": "all",
   "editor.scrollBeyondLastLine": false,
   "explorer.openEditors.visible": 0,
+  "docker.showExplorer": false,
   "files.associations": {
     ".Brewfile": "shellscript",
     ".clang-format": "yaml",
