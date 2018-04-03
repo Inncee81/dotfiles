@@ -16,6 +16,7 @@
     ".clang-format": "yaml",
     ".envrc": "shellscript"
   },
+  "git.autofetch": true,
   "gitProjectManager.baseProjectsFolders": [
     "~/src"
   ],
