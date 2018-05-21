@@ -30,6 +30,7 @@
     "ruby": true
   },
   "rust-client.channel": "nightly",
+  "rust.cfg_test": true,
   "window.title": "${activeEditorMedium}${separator}${rootName}",
   "workbench.colorTheme": "Tomorrow Night",
   "workbench.editor.enablePreviewFromQuickOpen": false,
