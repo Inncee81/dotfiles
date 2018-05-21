@@ -21,8 +21,7 @@
   ],
   "gitProjectManager.openInNewWindow": true,
   "gitProjectManager.storeRepositoriesBetweenSessions": true,
-  "javascript.format.insertSpaceAfterConstructor": true,
-  "javascript.format.insertSpaceBeforeFunctionParenthesis": true,
+  "prettier.singleQuote": true,
   "python.pythonPath": "python3",
   "ruby.lint": {
     "rubocop": true,
