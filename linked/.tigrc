@@ -8,3 +8,8 @@ bind generic <C-f> move-page-down
 bind generic g move-first-line
 bind generic G move-last-line
 bind status C !git commit --verbose
+
+bind generic <Esc>] !@hub browse
+bind main <Esc>c !@hub browse -- commit/%(commit)
+bind blame <Esc>c !@hub browse -- commit/%(commit)
+bind diff <Esc>c !@hub browse -- commit/%(commit)
