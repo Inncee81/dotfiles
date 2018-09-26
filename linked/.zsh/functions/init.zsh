@@ -9,6 +9,7 @@ autoload -Uz \
   w-fzf-git-unstaged-files
 
 autoload -z \
+  lab-browse \
   w-fzf-ghq--browse \
   w-ls-and-git-status \
   w-open-current-directory

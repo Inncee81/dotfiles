@@ -1,0 +1,10 @@
+#!/usr/bin/env zsh
+# Open the GitLab project in the browser
+
+local url=$(git config --get remote.origin.url)
+[[ -z $url ]] && return
+
+url=${url%.git}
+url=${url/#git@gitlab.com:/https:\/\/gitlab.com/}
+
+o $url || echo "Failed to open $url"
