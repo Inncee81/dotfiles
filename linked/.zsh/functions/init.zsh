@@ -10,6 +10,7 @@ autoload -Uz \
 
 autoload -z \
   lab-browse \
+  lab-mr \
   w-fzf-ghq--browse \
   w-ls-and-git-status \
   w-open-current-directory

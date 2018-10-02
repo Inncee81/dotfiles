@@ -1,0 +1,16 @@
+#!/usr/bin/env zsh
+# Open *New Merge Request* page on GitLab in the browser
+# Usage: lab-mr [target_branch]
+
+local origin=$(git config --get remote.origin.url)
+[[ -z $origin ]] && return
+
+origin=${origin%.git}
+origin=${origin/#git@gitlab.com:/https:\/\/gitlab.com/}
+
+source=$(git rev-parse --abbrev-ref HEAD)
+target=${1:-master}
+
+local url="$origin/merge_requests/new?merge_request[source_branch]=$source&merge_request[target_branch]=$target"
+url=$(omz_urlencode $url)
+o $url || echo "Failed to open $url"
