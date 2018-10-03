@@ -1,10 +1,14 @@
 #!/usr/bin/env zsh
 # Open the GitLab project in the browser
+# Usage: lab-browse [branch]
 
-local url=$(git config --get remote.origin.url)
-[[ -z $url ]] && return
+local origin=$(git config --get remote.origin.url)
+[[ -z $origin ]] && return
 
-url=${url%.git}
-url=${url/#git@gitlab.com:/https:\/\/gitlab.com/}
+origin=${origin%.git}
+origin=${origin/#git@gitlab.com:/https:\/\/gitlab.com/}
 
+branch=${1:-$(git rev-parse --abbrev-ref HEAD)}
+
+local url=$(omz_urlencode $origin/tree/$branch)
 o $url || echo "Failed to open $url"
