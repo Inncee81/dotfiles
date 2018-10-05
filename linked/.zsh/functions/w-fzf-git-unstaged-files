@@ -5,7 +5,7 @@ if ! git rev-parse --is-inside-work-tree &> /dev/null; then
   return
 fi
 
-local files=$(git ls-files -mo --exclude-standard "$(git rev-parse --show-toplevel)" | fzf-tmux -m)
+local files=$(git ls-files -mo --exclude-standard "$(git rev-parse --show-toplevel)" | uniq | fzf-tmux -m)
 [[ -z $files ]] && return
 
 files=${files//\ /\\\ }
