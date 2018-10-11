@@ -32,7 +32,9 @@ export GIBO_BOILERPLATES=$HOME/src/github.com/github/gitignore
 export GOPATH=$HOME
 export JAVA_HOME='/Applications/Android Studio.app/Contents/jre/jdk/Contents/Home'
 
-# local zshenv
-if [[ -f $HOME/.zshenv.local ]]; then
-  source $HOME/.zshenv.local
-fi
+source-if-found() {
+  [[ -r "$1" ]] && source "$1"
+}
+
+source-if-found /usr/local/opt/chruby/share/chruby/chruby.sh
+source-if-found $HOME/.zshenv.local

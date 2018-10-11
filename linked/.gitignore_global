@@ -1,3 +1,8 @@
+# direnv
+.direnv
+.envrc
+
+
 ### https://raw.github.com/github/gitignore/51f0ce3fed9732f1d730cb3309705da905fab768/Global/macOS.gitignore
 
 # General

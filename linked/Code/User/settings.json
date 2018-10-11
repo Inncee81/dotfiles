@@ -16,6 +16,9 @@
     ".clang-format": "yaml",
     ".envrc": "shellscript"
   },
+  "files.watcherExclude": {
+    "**/.direnv/**": true
+  },
   "git.autofetch": true,
   "gitProjectManager.baseProjectsFolders": ["~/src"],
   "gitProjectManager.openInNewWindow": true,
@@ -28,6 +31,9 @@
   },
   "rust-client.channel": "nightly",
   "rust.cfg_test": true,
+  "search.exclude": {
+    "**/.direnv": true
+  },
   "window.title": "${activeEditorMedium}${separator}${rootName}",
   "workbench.colorTheme": "Tomorrow Night",
   "workbench.editor.enablePreviewFromQuickOpen": false,
