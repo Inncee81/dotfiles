@@ -29,7 +29,7 @@
 [alias]
 	a = add
 	aa = !git add --all && git status
-	alias = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\\t => \\2/' | sort
+	aliases = !git config --list | grep 'alias\\.' | sed 's/alias\\.\\([^=]*\\)=\\(.*\\)/\\1\\\t => \\2/' | sort
 	amend = commit --amend --verbose
 	b = branch --verbose
 	ba = branch --all --verbose
