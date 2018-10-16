@@ -12,7 +12,7 @@ if ! zgen saved; then
   for lib in ${_omz_libs[@]}; do
     zgen load robbyrussell/oh-my-zsh lib/$lib.zsh
   done
-  zgen load kojole/hanpen.zsh-theme hanpen.zsh-theme  # depends on oh-my-zsh
+  zgen load uu1t/hanpen.zsh-theme hanpen.zsh-theme  # depends on oh-my-zsh
 
   zgen-load-locals() {
     for dir in $@; do
@@ -33,7 +33,7 @@ if ! zgen saved; then
   zgen load zsh-users/zsh-syntax-highlighting zsh-syntax-highlighting.zsh
   zgen load zsh-users/zsh-history-substring-search  # load after zsh-users/zsh-syntax-highlighting
 
-  zgen load ~/src/github.com/kojole/dotfiles/linked/.zsh/functions/init.zsh
+  zgen load ~/src/github.com/uu1t/dotfiles/linked/.zsh/functions/init.zsh
 
   zgen save
 fi
