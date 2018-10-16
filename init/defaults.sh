@@ -24,14 +24,21 @@ defaults write com.apple.dock mru-spaces -bool false
 ## restart dock
 killall Dock
 
+# Language & Region
+## Preferred languages: English, Japanese
+
 # Security & Privacy
-defaults write com.apple.screensaver askForPasswordDelay -int 5
+## Require passwore after: 5 seconds
 
 # Spotlight
 ## Spotlight menu/window keyboard shortcut: unchecked
 
+# Notifications
+## Turn off DnD: when the display is sleeping
+
 # Displays
 ## Resolution: Scaled to 1680 x 1050
+## Hide mirroring options in the menu bar
 
 # Energy Saver
 ## Turn display off after: 15 minutes (Battery), 1 hour (Adapter)
@@ -56,14 +63,11 @@ defaults write -g AppleKeyboardUIMode -int 2
 ## Change Caps Lock to Option or something
 
 # Trackpad
-## look up & data detectors
-defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerTapGesture -int 2
-
 ## tracking speed
 defaults write -g com.apple.trackpad.scaling -int 1
 
 # Bluetooth
-## Turn Bluetooth off
+## Show Bluetooth in menu bar
 
 # Sharing
 ## Change Computer Name
