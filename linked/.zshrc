@@ -142,3 +142,5 @@ chpwd_functions+=(auto-ls chpwd_recent_dirs)
 if (( ${+commands[direnv]} )); then
   eval "$(direnv hook zsh)"
 fi
+
+source-if-found $HOME/.zshrc.local
