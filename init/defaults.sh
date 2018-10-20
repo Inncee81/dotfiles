@@ -53,6 +53,8 @@ defaults write -g InitialKeyRepeat -int 25
 ## use function keys
 defaults write -g com.apple.keyboard.fnState -bool true
 
+## Change Caps Lock to Option or something
+
 ## spelling: US English
 defaults write -g NSSpellCheckerAutomaticallyIdentifiesLanguages -bool false
 defaults write -g NSPreferredSpellServerLanguage -string "en"
@@ -60,7 +62,8 @@ defaults write -g NSPreferredSpellServerLanguage -string "en"
 ## Full Keyboard Access: All controls
 defaults write -g AppleKeyboardUIMode -int 2
 
-## Change Caps Lock to Option or something
+## Automatically switch to document's input source
+defaults write com.apple.HIToolbox AppleGlobalTextInputProperties -dict TextInputGlobalPropertyPerContextInput 1
 
 # Trackpad
 ## tracking speed
