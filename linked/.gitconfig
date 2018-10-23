@@ -38,7 +38,7 @@
 	co = checkout
 	d = diff
 	dc = diff --cached
-	delete-merged = !git branch --merged master | grep -v 'master$' | xargs -n 1 -r git branch -d
+	delete-merged = "!f() { git branch --merged ${1:-master} | grep -v ${1:-master}$ | xargs -n 1 -r git branch -d; }; f"
 	di = diff
 	dic = diff --cached
 	discard = checkout --
