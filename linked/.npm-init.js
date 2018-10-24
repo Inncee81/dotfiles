@@ -23,7 +23,7 @@ const json = {
   name: repo,
   description: '',
   version: '0.1.0',
-  author: 'Yuichi Tanikawa <kojole.jp@gmail.com> (https://kojole.jp)'
+  author: 'Yuichi Tanikawa <u1.tanikawa@gmail.com>'
 };
 
 if (meta) {
