@@ -35,7 +35,7 @@
     "**/.direnv": true
   },
   "window.title": "${activeEditorMedium}${separator}${rootName}",
-  "workbench.colorTheme": "Tomorrow Night",
+  "workbench.colorTheme": "One Dark Pro",
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "workbench.iconTheme": "vscode-icons",
   "workbench.startupEditor": "none"
