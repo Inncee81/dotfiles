@@ -5,12 +5,17 @@ set split-view-width = 67%
 
 bind generic <C-b> move-page-up
 bind generic <C-f> move-page-down
+bind generic <C-s> view-grep
 bind generic g move-first-line
 bind generic G move-last-line
-bind main G move-last-line
-bind status C !git commit --verbose
+bind main    G move-last-line
+bind status  C !git commit --verbose
 
-bind generic <Esc>] !@hub browse
-bind main <Esc>c !@hub browse -- commit/%(commit)
-bind blame <Esc>c !@hub browse -- commit/%(commit)
-bind diff <Esc>c !@hub browse -- commit/%(commit)
+bind generic c @code %(file)
+bind generic Y @sh -c "printf '%s' %(commit) | pbcopy"
+
+bind generic <Esc>] @hub browse
+bind generic <Esc>b @hub browse -- blame/%(branch)/%(file)
+bind generic <Esc>c @hub browse -- commit/%(commit)
+bind generic <Esc>f @hub browse -- blob/%(branch)/%(file)
+bind generic <Esc>t @hub browse -- tree/%(branch)/%(directory)
