@@ -1,26 +1,34 @@
 language: ruby
 rvm:
-- 2.4
+  - 2.4
 os:
-- osx
+  - osx
 branches:
   only:
-  - master
+    - master
 before_install:
-- bundle install
-- brew update
-- brew --version
-- mkdir -pv $HOME/.aws $HOME/.ssh $HOME/Dropbox/.share/.aws $HOME/Dropbox/.share/.ssh
-  $HOME/Library/Application\ Support/Code/User
-- touch $HOME/Dropbox/.share/.aws/config $HOME/Dropbox/.share/.aws/credentials $HOME/Dropbox/.share/.gitconfig.local
-  $HOME/Dropbox/.share/.ssh/config $HOME/Dropbox/.share/.zshenv.local
+  - bundle install
+  - brew update
+  - brew --version
+  - mkdir -pv \
+    $HOME/.aws \
+    $HOME/.ssh \
+    $HOME/Dropbox/.share/.aws \
+    $HOME/Dropbox/.share/.ssh \
+    $HOME/Library/Application\ Support/Code/User
+  - touch \
+    $HOME/Dropbox/.share/.aws/config \
+    $HOME/Dropbox/.share/.aws/credentials \
+    $HOME/Dropbox/.share/.gitconfig.local \
+    $HOME/Dropbox/.share/.ssh/config \
+    $HOME/Dropbox/.share/.zshenv.local
 install:
-- brew install zsh
-- make shell
-- yes | make symlink
+  - brew install zsh
+  - make shell
+  - yes | make symlink
 script:
-- make test
-- "/usr/local/bin/zsh -cli 'true'"
+  - make test
+  - "/usr/local/bin/zsh -cli 'true'"
 notifications:
   slack:
-    secure: q4DSgR+Z7LC7cesnw3QGYWY9qQzzo4Pc8inbQ3iTGVAlH4edMJT8CUFlJTMmWyJkG6+xIcWZ/QEFlKZVpB2RMxrkkjHlVws37ebmS2pXMFf/5ISrUMPU+0og8IZMe3SRMYcVzPQON+f+ALamQ++KuApPRwJi0Ds4UZ/U3OcnQS/bi8rp8ZITlvxlhFq0QKc6gCS+JS45+MaejuO+JWgLX9OU2fR+413ALEeUiVpiefFasaGYNNbSYGDhY8LVkHD2Mhxq+GHAZQPeFckrN3icK1YJ9UqY6Zs4s+XnLcJWyX1nql1GRW0IQc+mo3quw+9IPW71yr+oqE3zvF8EVIpLLQ38S1k9ngyfdV8iNS06Q/7hOiAgF8S9IDn0bYQte8kfsJB93p/89MntX0vSIcV9RZAkyrAAy+uI3N+Ta+9SDJoPWj+L43tGaXeTiAEtfRcZLYPgraTbtVuHrqgfnSt4BZR7se6ILdBaoCWwAwLKanBTa/ddz14c1YqtwAT2DJYBT9IM5V0dm3R11erK7mXWelISN32SwEyBOZe+NvRkOHjgdBZz0BH2URwT6bP9ao0ITUGHm23evb9xK/cSzRObZKRbFlrQVZEtMOXg9sAul1BpM3VBo/fl/n0QPrQU2/9InqpA46fUU4w47o6B54jBqfvETLwEN9IlQXU9RmuiGpw=
+    secure: BcQGo3/RVeWecGJMCAnqiuFsnUJdzFWCNH7vYJxWAwEmCGa+EW17gY9m9eZf6BK9hcWcCnYGGlhCEU05nJDEW6W5khka7MQT6nHId6EgtYvibQrAfeDdRcbLXyE1q9/dvHG9jQbdnjealeZ6QhE8RnBKkP9fsgKpEnFt/Mu92cfcBQc68asEvmAdBs5Yu6QK4NwBLEN9klUQrnGpMP6mZ2gwdcGlwjOXy0ntqccxJhvzbD11l/dsR8qJ1ebH5dcwGrVdiz5GoNkwHuJVK9CogPg86zKFywuK+N9UnsBHGkbSbHepPcO4qFPTpBDzMsXEKD/EOv56LkZPFXjVx/fS2DIFcc/h6OYiLqWfQZJQBlw0BsLJzl69+dlSJSwOAZpkZ2XLwFELanQ2nB5rDlQwgCrH0SgLWcD4EapFtvj1vzCUkJEw3++PCqmWSid+40oDGUwmu0cbJOgNpgBRI0udxAzVCfx44AVe6NlcbK6C++9App7VpA8r2lXxVwmV96Mqku5rk8pI2rbfTDSsAFdiJUgk+XuMunLOT6uEyDCKFS9FVc6DDd7ONbwwuoDhS8A6Q2XT9qAxaJu6MW1cUBcasvJ7TPw4JlS6CcnbIn1kna94iFixXN/iDUygxWYmaSyQV3zS5RQ9JGFNvbbGjMJy5TeFtVz8uNkhkDRsoePh97Q=
