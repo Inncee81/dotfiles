@@ -21,6 +21,9 @@ defaults write com.apple.dock orientation -string "left"
 ## disable auto-rearrange spaces
 defaults write com.apple.dock mru-spaces -bool false
 
+## Hide recent applications
+defaults write com.apple.dock show-recents -bool false
+
 ## restart dock
 killall Dock
 
