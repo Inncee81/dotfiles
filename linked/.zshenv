@@ -7,7 +7,7 @@ export LESS='-iMR'
 typeset -U path manpath
 path=(
   $HOME{/Dropbox,/.cargo,}/bin(N-/)
-  $HOME/src/github.com/{kojole/dotfiles,flutter/flutter{,/bin/cache/dart-sdk}}/bin(N-/)
+  $HOME/src/github.com/{$USER/dotfiles,flutter/flutter{,/bin/cache/dart-sdk}}/bin(N-/)
   $HOME/Library/Android/sdk/{,platform-}tools(N-/)
   /usr/local/opt/{coreutils,findutils,gnu-sed,grep}/libexec/gnubin(N-/)
   {/usr/local,/usr,}/bin(N-/)
