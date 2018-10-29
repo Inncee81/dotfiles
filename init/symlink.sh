@@ -6,16 +6,19 @@ DOTFILES_DIR=$PROJECT_ROOT/linked
 DOTFILES_DROPBOX_DIR=$HOME/Dropbox/.share
 
 ln_s() {
-  local target_dir=$1
-  local target=$2
-  local link_dir=$HOME/${3-}
-  link_dir=${link_dir%/}
-  local link=$link_dir/$target
-  if [[ -L $link ]]; then
+  local target=$1/$2
+  local link="$HOME/${3-}"
+  link="${link%/}/$2"
+  if [[ -L "$link" ]]; then
     echo "Symlink exists, skip: $link"
-  else
-    ln -isv $target_dir/$target "$link"
+    return
   fi
+
+  local link_dir="${link%/*}"
+  if [[ ! -d "$link_dir" ]]; then
+    mkdir -p "$link_dir"
+  fi
+  ln -isv $target "$link"
 }
 
 create_symlinks() {
