@@ -55,6 +55,7 @@ cask "google-japanese-ime"
 cask "hyperswitch"
 cask "insomnia"
 cask "iterm2"
+cask "jasper"
 # cask 'keycastr'
 # cask 'kindle'
 # cask "licecap"
