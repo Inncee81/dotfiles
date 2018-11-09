@@ -5,6 +5,7 @@ autoload -Uz \
   w-cdup-or-insert-circumflex \
   w-fzf-ghq \
   w-fzf-ghq--cd \
+  w-fzf-git-checkout-local \
   w-fzf-git-commit-hash \
   w-fzf-git-unstaged-files
 
@@ -31,6 +32,10 @@ bindkey '^[]' w-fzf-ghq--browse
 # <ctrl-]>
 zle -N w-fzf-ghq--cd
 bindkey '^]' w-fzf-ghq--cd
+
+# <alt-:>
+zle -N w-fzf-git-checkout-local
+bindkey '^[:' w-fzf-git-checkout-local
 
 # <alt-@>
 zle -N w-fzf-git-commit-hash

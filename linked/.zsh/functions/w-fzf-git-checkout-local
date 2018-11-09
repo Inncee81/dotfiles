@@ -1,0 +1,8 @@
+#!/usr/bin/env zsh
+# `git checkout` the selected local branch
+
+local branch=$(git branch | fzf-tmux --prompt 'branch> ')
+[[ -z $branch ]] && return
+
+BUFFER="git checkout ${branch##\*# #}"
+zle accept-line
