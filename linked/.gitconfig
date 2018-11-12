@@ -19,6 +19,8 @@
 	followTags = true
 [rebase]
 	autosquash = true
+[submodule]
+	recurse = true
 [status]
 	showUntrackedFiles = all
 [url "https://github.com/"]
