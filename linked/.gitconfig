@@ -40,7 +40,7 @@
 	co = checkout
 	d = diff
 	dc = diff --cached
-	delete-merged = "!f() { git branch --merged ${1:-master} | grep -v -e ${1:-master}$ -e master$ -e develop$ | xargs -n 1 -r git branch -d; }; f"
+	delete-merged = "!f() { git branch --merged ${1:-master} | grep -v -e ${1:-master}$ -e master$ -e develop$ -e '^*' | xargs -n 1 -r git branch -d; }; f"
 	di = diff
 	dic = diff --cached
 	discard = checkout --
