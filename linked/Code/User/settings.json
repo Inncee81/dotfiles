@@ -37,6 +37,7 @@
   "window.title": "${activeEditorMedium}${separator}${rootName}",
   "workbench.colorTheme": "One Dark Pro",
   "workbench.editor.enablePreviewFromQuickOpen": false,
+  "workbench.editor.highlightModifiedTabs": true,
   "workbench.iconTheme": "vscode-icons",
   "workbench.startupEditor": "none"
 }
