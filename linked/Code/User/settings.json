@@ -9,6 +9,7 @@
   "editor.formatOnType": true,
   "editor.minimap.enabled": false,
   "editor.renderLineHighlight": "all",
+  "editor.rulers": [120],
   "editor.scrollBeyondLastLine": false,
   "eslint.autoFixOnSave": true,
   "eslint.validate": [
@@ -47,6 +48,11 @@
     "**/.direnv": true
   },
   "vetur.format.defaultFormatter.html": "prettyhtml",
+  "vetur.format.defaultFormatterOptions": {
+    "prettyhtml": {
+      "printWidth": 120
+    }
+  },
   "window.title": "${activeEditorMedium}${separator}${rootName}",
   "workbench.colorTheme": "One Dark Pro",
   "workbench.editor.enablePreviewFromQuickOpen": false,
