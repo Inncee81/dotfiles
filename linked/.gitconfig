@@ -34,12 +34,12 @@
 	amend = commit --amend --verbose
 	b = branch --verbose
 	ba = branch --all --verbose
+	branch-prune = "!f() { git branch --merged ${1:-master} | grep -v -e ${1:-master}$ -e master$ -e develop$ -e '^*' | xargs -n 1 -r git branch -d; }; f"
 	branches = branch --all --verbose
 	ci = commit --verbose
 	co = checkout
 	d = diff
 	dc = diff --cached
-	delete-merged = "!f() { git branch --merged ${1:-master} | grep -v -e ${1:-master}$ -e master$ -e develop$ -e '^*' | xargs -n 1 -r git branch -d; }; f"
 	di = diff
 	dic = diff --cached
 	discard = checkout --
