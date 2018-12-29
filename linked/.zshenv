@@ -10,6 +10,7 @@ path=(
   $HOME/src/github.com/{$USER/dotfiles,flutter/flutter{,/bin/cache/dart-sdk}}/bin(N-/)
   $HOME/Library/Android/sdk/{,platform-}tools(N-/)
   /usr/local/opt/{coreutils,findutils,gnu-sed,grep}/libexec/gnubin(N-/)
+  /usr/local/{lib/ruby/gems/2.6.0,opt/ruby}/bin(N-/)
   {/usr/local,/usr,}/bin(N-/)
   {/usr,}/sbin(N-/)
 )
