@@ -33,12 +33,14 @@ create_symlinks() {
 create_symlinks_darwin() {
   ln_s $DOTFILES_DIR Code/User/keybindings.json Library/Application\ Support
   ln_s $DOTFILES_DIR Code/User/settings.json    Library/Application\ Support
+  ln_s $DOTFILES_DIR Code/User/snippets         Library/Application\ Support
   ln_s $DOTFILES_DIR Library/Scripts
 }
 
 create_symlinks_linux() {
   ln_s $DOTFILES_DIR Code/User/keybindings.json .config
   ln_s $DOTFILES_DIR Code/User/settings.json    .config
+  ln_s $DOTFILES_DIR Code/User/snippets         .config
 }
 
 create_symlinks $DOTFILES_DIR

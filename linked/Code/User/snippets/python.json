@@ -1,0 +1,31 @@
+{
+  "def main(): ... if(main)": {
+    "prefix": "__main__",
+    "body": ["def main():", "    ${0:pass}", "", "", "if __name__ == '__main__':", "    main()"],
+    "description": "Code snippet for the main method"
+  },
+  "input integer": {
+    "prefix": "ii",
+    "body": ["int(input())"]
+  },
+  "input integers": {
+    "prefix": "iis",
+    "body": ["map(int, input().split())"]
+  },
+  "input integers as list": {
+    "prefix": "iisl",
+    "body": ["list(map(int, input().split()))"]
+  },
+  "input integers as list in lines": {
+    "prefix": "iisn",
+    "body": ["[int(input()) for _ in range(${1:n})]"]
+  },
+  "input strings": {
+    "prefix": "iss",
+    "body": ["input().split()"]
+  },
+  "MOD": {
+    "prefix": "MOD",
+    "body": "MOD = 1000000007"
+  }
+}
