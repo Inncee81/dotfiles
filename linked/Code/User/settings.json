@@ -37,6 +37,7 @@
   "prettier.printWidth": 120,
   "prettier.semi": false,
   "prettier.singleQuote": true,
+  "python.formatting.provider": "black",
   "python.pythonPath": "python3",
   "ruby.lint": {
     "rubocop": true,
