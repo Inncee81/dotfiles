@@ -2,6 +2,8 @@
 source $HOME/src/github.com/tarjoilija/zgen/zgen.zsh
 
 if ! zgen saved; then
+  zgen load mafredri/zsh-async async.zsh
+
   # oh-my-zsh/lib/theme-and-appearance.zsh requires .dircolors to exist
   zgen clone seebi/dircolors-solarized
   if [ ! -L $HOME/.dircolors ]; then
@@ -12,7 +14,7 @@ if ! zgen saved; then
   for lib in ${_omz_libs[@]}; do
     zgen load robbyrussell/oh-my-zsh lib/$lib.zsh
   done
-  zgen load uu1t/hanpen.zsh-theme hanpen.zsh-theme  # depends on oh-my-zsh
+  zgen load uu1t/hanpen.zsh-theme hanpen.zsh-theme  # depends on oh-my-zsh, zsh-async
 
   zgen-load-locals() {
     for dir in $@; do
