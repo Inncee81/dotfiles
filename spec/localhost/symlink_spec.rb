@@ -13,7 +13,6 @@ describe 'symlink' do
                  .Brewfile
                  Library/Application\ Support/Code/User/keybindings.json
                  Library/Application\ Support/Code/User/settings.json
-                 Library/Scripts
                  .ssh/config
                ))
 
