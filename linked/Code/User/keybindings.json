@@ -74,12 +74,12 @@
   },
   // Explorer
   {
-    "key": "a",
+    "key": "ctrl+a",
     "command": "explorer.newFile",
     "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
   },
   {
-    "key": "shift+a",
+    "key": "ctrl+shift+a",
     "command": "explorer.newFolder",
     "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
   },
@@ -88,7 +88,7 @@
     "command": "-renameFile"
   },
   {
-    "key": "m",
+    "key": "f2",
     "command": "renameFile",
     "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
   },
