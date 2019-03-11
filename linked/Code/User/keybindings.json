@@ -98,7 +98,7 @@
     "command": "-workbench.action.zoomOut"
   },
   {
-    "key": "shift+ctrl+[Minus]",
+    "key": "ctrl+shift+[Minus]",
     "command": "workbench.action.navigateForward"
   },
   {
@@ -125,5 +125,14 @@
   {
     "key": "ctrl+shift+]",
     "command": "gitProjectManager.refreshProjects"
+  },
+  // Rails Fast Nav
+  {
+    "key": "ctrl+alt+c",
+    "command": "rails.switchToController"
+  },
+  {
+    "key": "ctrl+alt+v",
+    "command": "rails.switchToView"
   }
 ]
