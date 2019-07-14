@@ -10,7 +10,7 @@ if ! zgen saved; then
     ln -sv $(-zgen-get-clone-dir seebi/dircolors-solarized)/dircolors.256dark $HOME/.dircolors
   fi
 
-  _omz_libs=(clipboard completion directories functions git grep history key-bindings misc termsupport theme-and-appearance)
+  _omz_libs=(clipboard completion functions git grep history key-bindings misc termsupport theme-and-appearance)
   for lib in ${_omz_libs[@]}; do
     zgen load robbyrussell/oh-my-zsh lib/$lib.zsh
   done
@@ -45,6 +45,10 @@ bindkey '^P' history-substring-search-up
 bindkey '^N' history-substring-search-down
 
 ### zshoptions
+# changing directories
+setopt AUTO_PUSHD
+setopt PUSHD_IGNORE_DUPS
+
 # completion
 setopt AUTO_LIST
 setopt AUTO_PARAM_KEYS
@@ -86,6 +90,7 @@ alias gl='ghq look'
 alias l='ls'
 alias la='ls -A'
 alias ll='ls -l -a'
+alias md='mkdir -p'
 alias o="${functions[(i)open_command]:-open}"  # defined in oh-my-zsh/lib/functions.zsh
 alias t='tig'
 alias ta='tig --all'
