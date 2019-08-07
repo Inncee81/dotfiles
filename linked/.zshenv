@@ -32,11 +32,13 @@ export GHQ_ROOT=$HOME/src
 export GIBO_BOILERPLATES=$HOME/src/github.com/github/gitignore
 export GOPATH=$HOME
 export JAVA_HOME='/Applications/Android Studio.app/Contents/jre/jdk/Contents/Home'
+export NVM_DIR=$HOME/.nvm
 export PIPENV_VENV_IN_PROJECT=1
 
 source-if-found() {
-  [[ -r "$1" ]] && source "$1"
+  [[ -r "$1" ]] && source "$@"
 }
 
 source-if-found /usr/local/opt/chruby/share/chruby/chruby.sh
 source-if-found $HOME/.zshenv.local
+source-if-found $NVM_DIR/nvm.sh --no-use
