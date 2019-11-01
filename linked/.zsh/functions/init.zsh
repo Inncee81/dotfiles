@@ -2,6 +2,7 @@
 ### autolaod
 autoload -Uz \
   co \
+  nvm \
   w-cdup-or-insert-circumflex \
   w-fzf-ghq \
   w-fzf-ghq--cd \

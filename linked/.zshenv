@@ -41,4 +41,3 @@ source-if-found() {
 
 source-if-found /usr/local/opt/chruby/share/chruby/chruby.sh
 source-if-found $HOME/.zshenv.local
-source-if-found $NVM_DIR/nvm.sh --no-use
