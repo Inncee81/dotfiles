@@ -1,6 +1,15 @@
 #!/usr/bin/env bash
 
-# Manage rubies with direnv and ruby-install
+# Manage nodes using direnv and nvm
+# Usage: use nvm <node_version>
+use_nvm() {
+  if [[ -e /usr/local/opt/nvm/nvm.sh ]]; then
+    source /usr/local/opt/nvm/nvm.sh
+    nvm use $1
+  fi
+}
+
+# Manage rubies using direnv and ruby-install
 # Usage: use ruby <ruby_version>
 use_ruby() {
   local ruby_root=$HOME/.rubies/$1
