@@ -54,7 +54,7 @@
       "printWidth": 120
     }
   },
-  "window.title": "${activeEditorMedium}${separator}${rootName}",
+  "window.title": "[${rootName}] ${activeEditorMedium} ${dirty}",
   "workbench.colorTheme": "One Dark Pro",
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "workbench.editor.highlightModifiedTabs": true,
