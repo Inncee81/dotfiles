@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+set -e
+
+main() {
+  if [[ -z $AWS_MFA_DEVICE ]]; then
+    echo 'aws-mfa: $AWS_MFA_DEVICE environment variable is required.'
+    return 1
+  fi
+
+  local token
+  read -p 'Token from MFA device: ' token
+
+  readonly out=$(mktemp)
+  aws sts get-session-token --serial-number $AWS_MFA_DEVICE --token-code $token --duration-seconds 129600 > "$out"
+
+  readonly access_key_id=$(jq -r .Credentials.AccessKeyId "$out")
+  readonly secret_access_key=$(jq -r .Credentials.SecretAccessKey "$out")
+  readonly session_token=$(jq -r .Credentials.SessionToken "$out")
+
+  echo "
+[mfa]
+aws_access_key_id = $access_key_id
+aws_secret_access_key = $secret_access_key
+aws_session_token = $session_token
+" >> ~/.aws/credentials
+
+  echo "aws-mfa: Credentials are appended to ~/.aws/credentials"
+}
+
+main
