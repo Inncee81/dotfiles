@@ -1,5 +1,4 @@
 {
-  "breadcrumbs.enabled": true,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
@@ -9,9 +8,7 @@
   "editor.formatOnType": true,
   "editor.minimap.enabled": false,
   "editor.renderLineHighlight": "all",
-  "editor.rulers": [
-    120
-  ],
+  "editor.rulers": [120],
   "editor.scrollBeyondLastLine": false,
   "explorer.openEditors.visible": 0,
   "files.associations": {
@@ -22,12 +19,11 @@
     "**/.direnv/**": true
   },
   "git.autofetch": true,
-  "gitProjectManager.baseProjectsFolders": [
-    "~/src"
-  ],
+  "gitProjectManager.baseProjectsFolders": ["~/src"],
   "gitProjectManager.maxDepthRecursion": 5,
   "gitProjectManager.openInNewWindow": true,
   "gitProjectManager.storeRepositoriesBetweenSessions": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
   "prettier.printWidth": 120,
   "prettier.semi": false,
   "prettier.singleQuote": true,
@@ -50,6 +46,7 @@
     }
   },
   "window.title": "[${rootName}] ${activeEditorMedium} ${dirty}",
+  "window.zoomLevel": 1,
   "workbench.colorTheme": "One Dark Pro",
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "workbench.editor.highlightModifiedTabs": true,
