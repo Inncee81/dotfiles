@@ -17,6 +17,7 @@ main() {
   readonly secret_access_key=$(jq -r .Credentials.SecretAccessKey "$out")
   readonly session_token=$(jq -r .Credentials.SessionToken "$out")
 
+  sed -e '/^\[mfa\]$/,+4d' -e 'N;/^\n$/D;P;D;' -i ~/.aws/credentials
   echo "
 [mfa]
 aws_access_key_id = $access_key_id
@@ -24,7 +25,7 @@ aws_secret_access_key = $secret_access_key
 aws_session_token = $session_token
 " >> ~/.aws/credentials
 
-  echo "aws-mfa: Credentials are appended to ~/.aws/credentials"
+  echo "aws-mfa: Credentials are set to \`mfa\` profile in ~/.aws/credentials"
 }
 
 main
