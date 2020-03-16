@@ -1,39 +1,33 @@
 {
   "breadcrumbs.enabled": true,
-  "C_Cpp.clang_format_path": "/usr/local/bin/clang-format",
-  "C_Cpp.intelliSenseEngine": "Default",
-  "c-cpp-flylint.flexelint.enable": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
   "editor.fontFamily": "Source Code Pro, Ricty Diminished",
   "editor.fontSize": 14,
   "editor.formatOnSave": true,
   "editor.formatOnType": true,
   "editor.minimap.enabled": false,
   "editor.renderLineHighlight": "all",
-  "editor.rulers": [120],
-  "editor.scrollBeyondLastLine": false,
-  "eslint.autoFixOnSave": true,
-  "eslint.validate": [
-    "javascript",
-    "javascriptreact",
-    {
-      "language": "vue",
-      "autoFix": true
-    }
+  "editor.rulers": [
+    120
   ],
+  "editor.scrollBeyondLastLine": false,
   "explorer.openEditors.visible": 0,
   "files.associations": {
     ".Brewfile": "shellscript",
-    ".clang-format": "yaml",
     ".envrc": "shellscript"
   },
   "files.watcherExclude": {
     "**/.direnv/**": true
   },
   "git.autofetch": true,
-  "gitProjectManager.baseProjectsFolders": ["~/src"],
+  "gitProjectManager.baseProjectsFolders": [
+    "~/src"
+  ],
+  "gitProjectManager.maxDepthRecursion": 5,
   "gitProjectManager.openInNewWindow": true,
   "gitProjectManager.storeRepositoriesBetweenSessions": true,
-  "prettier.eslintIntegration": true,
   "prettier.printWidth": 120,
   "prettier.semi": false,
   "prettier.singleQuote": true,
@@ -48,6 +42,7 @@
   "search.exclude": {
     "**/.direnv": true
   },
+  "typescript.updateImportsOnFileMove.enabled": "always",
   "vetur.format.defaultFormatter.html": "prettyhtml",
   "vetur.format.defaultFormatterOptions": {
     "prettyhtml": {
