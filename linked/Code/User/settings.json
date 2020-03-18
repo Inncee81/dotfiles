@@ -8,8 +8,15 @@
   "editor.formatOnType": true,
   "editor.minimap.enabled": false,
   "editor.renderLineHighlight": "all",
-  "editor.rulers": [120],
+  "editor.rulers": [
+    120
+  ],
   "editor.scrollBeyondLastLine": false,
+  "eslint.workingDirectories": [
+    {
+      "mode": "auto"
+    }
+  ],
   "explorer.openEditors.visible": 0,
   "files.associations": {
     ".Brewfile": "shellscript",
@@ -19,7 +26,9 @@
     "**/.direnv/**": true
   },
   "git.autofetch": true,
-  "gitProjectManager.baseProjectsFolders": ["~/src"],
+  "gitProjectManager.baseProjectsFolders": [
+    "~/src"
+  ],
   "gitProjectManager.maxDepthRecursion": 5,
   "gitProjectManager.openInNewWindow": true,
   "gitProjectManager.storeRepositoriesBetweenSessions": true,
