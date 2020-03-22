@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+tap "homebrew/bundle"
+tap "homebrew/core"
+brew "diff-so-fancy"
+brew "ghq"
+brew "gibo"
