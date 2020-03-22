@@ -36,7 +36,9 @@ export NVM_DIR=$HOME/.nvm
 export PIPENV_VENV_IN_PROJECT=1
 
 source-if-found() {
-  [[ -r "$1" ]] && source "$@"
+  if [[ -r "$1" ]]; then
+    source "$@"
+  fi
 }
 
 source-if-found /usr/local/opt/chruby/share/chruby/chruby.sh

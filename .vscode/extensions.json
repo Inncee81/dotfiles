@@ -6,8 +6,8 @@
     "esbenp.prettier-vscode",
     "felipecaputo.git-project-manager",
     "hiro-sun.vscode-emacs",
-    "PeterJausovec.vscode-docker",
-    "robertohuertasm.vscode-icons",
-    "zhuangtongfa.Material-theme"
+    "ms-azuretools.vscode-docker",
+    "vscode-icons-team.vscode-icons",
+    "zhuangtongfa.material-theme"
   ]
 }

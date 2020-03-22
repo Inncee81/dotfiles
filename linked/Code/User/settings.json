@@ -19,7 +19,6 @@
   ],
   "explorer.openEditors.visible": 0,
   "files.associations": {
-    ".Brewfile": "shellscript",
     ".envrc": "shellscript"
   },
   "files.watcherExclude": {

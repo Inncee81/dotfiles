@@ -1,7 +1,8 @@
-tap "homebrew/core"
-tap "homebrew/cask"
+#!/usr/bin/env ruby
 tap "homebrew/bundle"
+tap "homebrew/cask"
 tap "homebrew/cask-fonts"
+tap "homebrew/core"
 # brew "awscli"
 brew "colordiff"
 brew "coreutils"
