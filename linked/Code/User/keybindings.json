@@ -134,5 +134,16 @@
   {
     "key": "ctrl+alt+v",
     "command": "rails.switchToView"
+  },
+  // on Linux
+  {
+    "key": "meta+w",
+    "command": "workbench.action.closeActiveEditor",
+    "when": "isLinux"
+  },
+  {
+    "key": "meta+[BracketLeft]",
+    "command": "workbench.action.quickOpen",
+    "when": "isLinux"
   }
 ]
