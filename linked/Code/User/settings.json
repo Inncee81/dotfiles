@@ -33,8 +33,6 @@
   "gitProjectManager.openInNewWindow": true,
   "gitProjectManager.storeRepositoriesBetweenSessions": true,
   "javascript.updateImportsOnFileMove.enabled": "always",
-  "prettier.printWidth": 120,
-  "prettier.semi": false,
   "prettier.singleQuote": true,
   "python.formatting.provider": "black",
   "python.pythonPath": "python3",
