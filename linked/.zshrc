@@ -150,4 +150,8 @@ if (( ${+commands[direnv]} )); then
   eval "$(direnv hook zsh)"
 fi
 
+if (( ${+commands[fnm]} )); then
+  eval "$(fnm env --multi --use-on-cd)"
+fi
+
 source-if-found $HOME/.zshrc.local
