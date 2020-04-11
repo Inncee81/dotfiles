@@ -33,9 +33,6 @@ killall Dock
 # Security & Privacy
 ## Require passwore after: 5 seconds
 
-# Spotlight
-## Spotlight menu/window keyboard shortcut: unchecked
-
 # Notifications
 ## Turn off DnD: when the display is sleeping
 
@@ -61,6 +58,10 @@ defaults write -g com.apple.keyboard.fnState -bool true
 ## spelling: US English
 defaults write -g NSSpellCheckerAutomaticallyIdentifiesLanguages -bool false
 defaults write -g NSPreferredSpellServerLanguage -string "en"
+
+## Shortcuts
+### Unbind ctrl+f1, ctrl+space, ctrl+alt+space
+### Bind ctrl+cmd+{num} to `Switch to Desktop {num}`
 
 ## Full Keyboard Access: All controls
 defaults write -g AppleKeyboardUIMode -int 2
