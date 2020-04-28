@@ -9,6 +9,7 @@
   "editor.minimap.enabled": false,
   "editor.renderLineHighlight": "all",
   "editor.rulers": [
+    80,
     120
   ],
   "editor.scrollBeyondLastLine": false,
